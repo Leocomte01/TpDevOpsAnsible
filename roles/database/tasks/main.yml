@@ -1,0 +1,13 @@
+- name: Run DATABASE
+  docker_container:
+    name: mydb
+    image: leooo01/mydb:latest
+    pull: true
+    recreate: true
+    state: started
+    networks:
+      - name: app-network
+    env:
+      POSTGRES_DB: db
+      POSTGRES_USER: usr
+      POSTGRES_PASSWORD: pwd

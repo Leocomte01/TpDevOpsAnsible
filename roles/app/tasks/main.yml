@@ -1,0 +1,9 @@
+- name: Run App
+  docker_container:
+    name: my_api_student
+    image: leooo01/my_api_student:latest
+    pull: true
+    recreate: true
+    networks:
+      - name: app-network
+
